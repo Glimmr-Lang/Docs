@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Welcome to Glimmr
 
 <div id="logo">
     <img src="images/light.png" width="20%">
@@ -12,3 +12,4 @@
 ```glimmr
 fn main : Unit = ()
 ```
+
