@@ -1,8 +1,9 @@
 site_name: Glimmr
 
-
 nav:
   - Welcome: index.md
+  - Installation: install.md
+  - First Program: firstprogram.md
 
 extra_javascript:
   - assets/js/highlight.min.js
@@ -11,6 +12,7 @@ extra_javascript:
 extra_css:
   - assets/style/css.css
 
-
 theme: bootstrap386
 -- theme: readthedocs
+
+
