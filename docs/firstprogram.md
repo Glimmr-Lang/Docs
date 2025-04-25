@@ -13,8 +13,10 @@ fn main() : Unit = println("Hello, world")
 - On line 3 we can see a single line comment starting with `//` .
 - On line 4 we are declaring a function named `main` with no arguments that returns type `Unit` and the body is simple a call to the `println` function with the string literal `Hello, world` passed as a parameter. 
 
+## Coding Paradigm
 It has been said a countless times at this point that glimr is a functional language. Functions are the basic blocks for building programs. You can compose functions to create complex applications. Functions also be passed to and returned from other functions. Combined with the flexible type system, this makes glimmr a great choice for developing safe applications. 
 
+## Coding styles
 Glimr is a free form language. The syntax allows you to use white space to your in your style. You can declare all expressions in a single line or separate it for readability. Observe below:
 
 ##### Single line form
@@ -23,7 +25,7 @@ fn main() : Unit = println("Hello, world")
 ```
 
 >> VS
-##### Multiline form
+##### Multi line form
 ```glmr
 fn main() : Unit = 
 	println("Hello, world")
