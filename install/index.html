@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Installation - Glimmr</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../assets/style/css.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">Glimmr</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Welcome</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Installation</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../firstprogram/">First Program</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../firstprogram/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#get-glimmr">Get Glimmr</a></li>
+        
+            <li><a href="#pre-built-binaries">Pre-built Binaries</a></li>
+        
+            <li><a href="#build-from-source">Build from source</a></li>
+        
+            <li><a href="#install">Install</a></li>
+        
+            <li><a href="#whats-next">Whats next?</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="get-glimmr">Get Glimmr</h1>
+<h2 id="pre-built-binaries">Pre-built Binaries</h2>
+<blockquote>
+<p>Glimmr is currently only available through source, pre-built binaries are not available, so in order to try out glimmr you will have to build it yourself. Luckily the build process is very simple. Follow the build steps below.</p>
+</blockquote>
+<h2 id="build-from-source">Build from source</h2>
+<blockquote>
+<p>To compile the glimmr compiler you have to first get the source code.</p>
+</blockquote>
+<pre><code class="language-sh">$ git clone https://github.com/Glimmr-Lang/Glimmr
+</code></pre>
+<p>Then run the following commands:</p>
+<pre><code class="language-sh">$ cd Glimmr
+$ mvn package
+</code></pre>
+<p>The glimr compiler should then be compiled and packaged into a <code>.jar</code> file that is ready to use. There is a very useful shell script on the root of the directory, named <code>glmr</code>, this script is the entry point of the compiler. An install script will be included in future releases.</p>
+<h2 id="install">Install</h2>
+<p>You can copy the glimmr folder to any place on your computer and make sure to add it to the path so that the glimmr compiler can be invoked from any working directory in the terminal. If everything went well try running the following command on your terminal. </p>
+<pre><code class="language-sh">$ glmr --h
+</code></pre>
+<p>If glimmr is installed properly you should see a wall of text scroll up, quickly followed by a word art created in ASCII. If not try following the build steps one more time. </p>
+<p>You can also test the installation by running the following command</p>
+<pre><code class="language-glmr">$ glmr --version
+</code></pre>
+<p><strong>IMPORTANT</strong> : Please note that glimmr is still a work in progress, so bugs and unfinished features are expected. If you would like to contribute to glimmr submit a pull request on <a href="https://github.com/Glimmr-Lang">github</a>. Thank you</p>
+<h2 id="whats-next">Whats next?</h2>
+<p>Now that your are ready to start your glimmr journey let me not hold you back. Its coding time!</p></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../assets/js/highlight.min.js"></script>
+        <script src="../../assets/js/glimmr.js"></script>
+        <script src="../../search/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+
+#logo {
+    display: flex;
+    flex-direction: flex-col;
+    padding: 2%;
+}
+
+#inner > h1 {
+    padding-top: 2%;
+    font-size: xx-large;
+}
+
+.warning {
+	
+}
