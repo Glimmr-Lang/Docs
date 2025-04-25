@@ -1,1 +1,16 @@
-site_name: My Docs
+site_name: Glimmr
+
+
+nav:
+  - Welcome: index.md
+
+extra_javascript:
+  - assets/js/highlight.min.js
+  - assets/js/glimmr.js
+
+extra_css:
+  - assets/style/css.css
+
+
+theme: bootstrap386
+-- theme: readthedocs
