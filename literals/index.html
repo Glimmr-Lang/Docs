@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>First Program - Glimmr</title>
+        <title>Literals - Glimmr</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
@@ -59,14 +59,14 @@
             
             
             
-                <li class="active">
-                    <a href="./">First Program</a>
+                <li >
+                    <a href="../firstprogram/">First Program</a>
                 </li>
             
             
             
-                <li >
-                    <a href="../literals/">Literals</a>
+                <li class="active">
+                    <a href="./">Literals</a>
                 </li>
             
             
@@ -75,12 +75,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="next" href="../install/">
+                        <a rel="next" href="../firstprogram/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="prev" href="../literals/">
+                    <li class="disabled">
+                        <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -96,13 +96,15 @@
     <ul class="nav bs-sidenav">
       
     
-        <li class="main active"><a href="#hello-glimmr">Hello glimmr</a></li>
+        <li class="main active"><a href="#literals">Literals</a></li>
         
-            <li><a href="#explanation">Explanation</a></li>
+            <li><a href="#number-literals">Number Literals</a></li>
         
-            <li><a href="#coding-paradigm">Coding Paradigm</a></li>
+            <li><a href="#string-literals">String Literals</a></li>
         
-            <li><a href="#coding-styles">Coding styles</a></li>
+            <li><a href="#boolean-literals">Boolean Literals</a></li>
+        
+            <li><a href="#unit-literal">Unit Literal</a></li>
         
             <li><a href="#whats-next">Whats next?</a></li>
         
@@ -112,38 +114,54 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="hello-glimmr">Hello glimmr</h1>
-<p>Once again, welcome to the language reference of the glimmr programming language. If you have made it here I assume everything went well. If not, you can still follow but it is rather productive to learn practically. In this document we are going to discuss a basic glimr program, hello world. </p>
-<pre><code class="language-glimmr">import std::io { println }
-
-// Entry point
-fn main() : Unit = println(&quot;Hello, world&quot;)
+<h1 id="literals">Literals</h1>
+<p>literals are values that are directly inserted into the code, such as numbers, strings, etc. They are exact values that are not variables and do not change during the execution of the program.</p>
+<h2 id="number-literals">Number Literals</h2>
+<p>Numbers can be expressed in various formats:</p>
+<pre><code class="language-glimmr">20
+10_000_000
+50
 </code></pre>
-<h2 id="explanation">Explanation</h2>
+<p>Glimmr also supports decimal numeric literals. Similar to Interger number literals , decimal literals can also be separated by <code>_</code>.</p>
+<pre><code class="language-glimmr">20.5
+30.5
+</code></pre>
+<h2 id="string-literals">String Literals</h2>
+<p>Strings allow embedding text and expressions:</p>
 <ul>
-<li>The first line import a module from the standard library and pulls the println function into the current module scope. Modules are discussed in later sections. </li>
-<li>On line 3 we can see a single line comment starting with <code>//</code> .</li>
-<li>On line 4 we are declaring a function named <code>main</code> with no arguments that returns type <code>Unit</code> and the body is simple a call to the <code>println</code> function with the string literal <code>Hello, world</code> passed as a parameter. </li>
+<li><strong>Basic String:</strong> </li>
 </ul>
-<h2 id="coding-paradigm">Coding Paradigm</h2>
-<p>It has been said a countless times at this point that glimr is a functional language. Functions are the basic blocks for building programs. You can compose functions to create complex applications. Functions also be passed to and returned from other functions. Combined with the flexible type system, this makes glimmr a great choice for developing safe applications. </p>
-<h2 id="coding-styles">Coding styles</h2>
-<p>Glimr is a free form language. The syntax allows you to use white space to your in your style. You can declare all expressions in a single line or separate it for readability. Observe below:</p>
-<h5 id="single-line-form">Single line form</h5>
-<pre><code class="language-glimmr">fn main() : Unit = println(&quot;Hello, world&quot;)
+<pre><code class="language-glimmr">&quot;Alice&quot;
+&quot;Hello, I'm  a basic string&quot;
 </code></pre>
-<blockquote>
-<blockquote>
-<p>VS</p>
-</blockquote>
-</blockquote>
-<h5 id="multi-line-form">Multi line form</h5>
-<pre><code class="language-glimmr">fn main() : Unit = 
-    println(&quot;Hello, world&quot;)
+<p>Glimmr also supports <strong>Interpolated Strings</strong>, which can embed expressions. An interpolated string is denoted by a dollar sign ($). The expressions are enclosed in curly braces {} and can be used to embed dynamic values into the string.</p>
+<pre><code class="language-glimmr">&quot;${5} * 2 = ${5 * 2}&quot;
+&quot;Hello ${'World'}&quot;
 </code></pre>
-<p>You will decide how you want to format your code, we do impose any coding standard or style on you. Do you. </p>
+<h2 id="boolean-literals">Boolean Literals</h2>
+<p>Boolean values are used for logical operations:</p>
+<ul>
+<li><code>true</code></li>
+<li><code>false</code></li>
+</ul>
+<h2 id="unit-literal">Unit Literal</h2>
+<p>The Unit type represents an empty value:</p>
+<ul>
+<li><code>()</code></li>
+</ul>
+<h3 id="comments">Comments</h3>
+<p>Comments are useful for documenting code and providing context to developers. This language supports the following types of comments:</p>
+<h4 id="single-line-comments">Single line comments</h4>
+<pre><code class="language-glimmr">// Yow, I'm a comment
+</code></pre>
+<h4 id="multi-line-comments">Multi-line comments</h4>
+<pre><code class="language-glimmr">/* 
+ * Glimmr supports multi-line comments :)
+ */
+</code></pre>
+<p>Comments are ignored by the compiler/interpreter and do not affect the execution of the code.</p>
 <h2 id="whats-next">Whats next?</h2>
-<p>Lets dive into our first core topic of the glimmr programming language, <code>Literals</code>. Lets gooo!</p></div>
+<p>Now that we've explored the basics of literals in Glimmr, we can move on to more exciting topics. In the next section, we'll delve into Glimmr data types. We'll discover how Glimmr's type system works static typing can help us avoid writing error prone programs. </p></div>
                 </div>
         </div>
 
