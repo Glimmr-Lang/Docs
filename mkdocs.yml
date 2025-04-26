@@ -4,6 +4,7 @@ nav:
   - Welcome: index.md
   - Installation: install.md
   - First Program: firstprogram.md
+  - Literals: literals.md
 
 extra_javascript:
   - assets/js/highlight.min.js
