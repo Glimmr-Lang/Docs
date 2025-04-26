@@ -70,5 +70,5 @@ Comments are useful for documenting code and providing context to developers. Th
 
 Comments are ignored by the compiler/interpreter and do not affect the execution of the code.
 
-## Whats next?
+## What's next?
 Now that we've explored the basics of literals in Glimmr, we can move on to more exciting topics. In the next section, we'll delve into Glimmr data types. We'll discover how Glimmr's type system works static typing can help us avoid writing error prone programs. 

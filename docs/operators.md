@@ -6,7 +6,7 @@ Operators are special symbols used in expressions to perform operations on value
 
 | Operator | Description                                 | Example  | Result |
 | -------- | ------------------------------------------- | -------- | ------ |
-| `+`      | Adds two numbers.                           | 2 + 3    | 5      |
+| `+`      | Adds two numbers.                           | `2 + 3`    | 5      |
 | `-`      | Subtracts the second number from the first. | `5 - 2`  | `3`    |
 | `*`      | Multiplies two numbers.                     | `5 * 2`  | `10`   |
 | `/`      | Divides the first number by the second.     | `10 / 2` | `5`    |
