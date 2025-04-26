@@ -50,7 +50,7 @@ The Unit type represents an empty value:
 
 - `()`
 
-### Comments
+## Comments
 
 Comments are useful for documenting code and providing context to developers. This language supports the following types of comments:
 
