@@ -11,7 +11,7 @@ Numbers can be expressed in various formats:
 50
 ```
 
-Glimmr also supports decimal numeric literals. Similar to Interger number literals , decimal literals can also be separated by `_`.
+Glimmr also supports decimal numeric literals. Similar to `Integer` number literals , decimal literals can also be separated by `_`.
 
 
 ```glimmr
