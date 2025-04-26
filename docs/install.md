@@ -36,5 +36,5 @@ $ glmr --version
 
 **IMPORTANT** : Please note that glimmr is still a work in progress, so bugs and unfinished features are expected. If you would like to contribute to glimmr submit a pull request on [github](https://github.com/Glimmr-Lang). Thank you
 
-## Whats next?
+## What's next?
 Now that your are ready to start your glimmr journey let me not hold you back. Its coding time!
