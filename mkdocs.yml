@@ -5,6 +5,10 @@ nav:
   - Installation: install.md
   - First Program: firstprogram.md
   - Literals: literals.md
+  - Operators: operators.md
+  - Types: types.md
+  - Type Inference: inference.md
+  - Functions: functions.md
 
 extra_javascript:
   - assets/js/highlight.min.js
