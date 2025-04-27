@@ -65,6 +65,12 @@
             
             
             
+                <li >
+                    <a href="../literals/">Literals</a>
+                </li>
+            
+            
+            
                 <li class="active">
                     <a href="./">Operators</a>
                 </li>
@@ -72,7 +78,7 @@
             
             
                 <li >
-                    <a href="../literals/">Literals</a>
+                    <a href="../types/">Types</a>
                 </li>
             
             
@@ -81,12 +87,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="next" href="../firstprogram/">
+                        <a rel="next" href="../literals/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../literals/">
+                        <a rel="prev" href="../types/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -102,21 +108,42 @@
     <ul class="nav bs-sidenav">
       
     
-        <li class="main active"><a href="#operators">Operators</a></li>
+        <li class="main active"><a href="#arithmetic-operators">Arithmetic Operators</a></li>
         
-            <li><a href="#arithmetic-operators">Arithmetic Operators</a></li>
+            <li><a href="#code-snippet">Code Snippet</a></li>
         
-            <li><a href="#comparison-operators">Comparison Operators</a></li>
+    
+        <li class="main "><a href="#logical-operators">Logical Operators</a></li>
         
-            <li><a href="#logical-operators">Logical Operators</a></li>
+            <li><a href="#code-snippet_1">Code Snippet</a></li>
         
-            <li><a href="#bitwise-operators">Bitwise Operators</a></li>
+    
+        <li class="main "><a href="#unary-operators">Unary Operators</a></li>
         
-            <li><a href="#string-operators">String Operators</a></li>
+            <li><a href="#code-snippet_2">Code Snippet</a></li>
         
-            <li><a href="#pipe-operator">Pipe Operator</a></li>
+    
+        <li class="main "><a href="#bitwise-operators">Bitwise Operators</a></li>
         
-            <li><a href="#dot-operator">Dot Operator</a></li>
+            <li><a href="#code-snippet_3">Code Snippet</a></li>
+        
+    
+        <li class="main "><a href="#string-operators">String Operators</a></li>
+        
+            <li><a href="#code-snippet_4">Code Snippet</a></li>
+        
+    
+        <li class="main "><a href="#pipe-operator">Pipe Operator</a></li>
+        
+            <li><a href="#code-snippet_5">Code Snippet</a></li>
+        
+    
+        <li class="main "><a href="#dot-operator">Dot Operator</a></li>
+        
+            <li><a href="#code-snippet_6">Code Snippet</a></li>
+        
+    
+        <li class="main "><a href="#whats-next">What's next?</a></li>
         
     
     
@@ -124,7 +151,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="operators">Operators</h1>
+<p>​Operators</p>
 <p>Operators are special symbols used in expressions to perform operations on values. This section covers the various operators available in Glimmr, along with examples and descriptions.</p>
 <h2 id="arithmetic-operators">Arithmetic Operators</h2>
 <table>
@@ -132,235 +159,194 @@
 <tr>
 <th>Operator</th>
 <th>Description</th>
-<th>Example</th>
-<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>+</code></td>
 <td>Adds two numbers.</td>
-<td><code>2 + 3</code></td>
-<td><code>5</code></td>
 </tr>
 <tr>
 <td><code>-</code></td>
 <td>Subtracts the second number from the first.</td>
-<td><code>5 - 2</code></td>
-<td><code>3</code></td>
 </tr>
 <tr>
 <td><code>*</code></td>
 <td>Multiplies two numbers.</td>
-<td><code>5 * 2</code></td>
-<td><code>10</code></td>
 </tr>
 <tr>
 <td><code>/</code></td>
 <td>Divides the first number by the second.</td>
-<td><code>10 / 2</code></td>
-<td><code>5</code></td>
 </tr>
 <tr>
 <td><code>%</code></td>
 <td>Returns the remainder of division.</td>
-<td><code>10 % 3</code></td>
-<td><code>1</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="comparison-operators">Comparison Operators</h2>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Description</th>
-<th>Example</th>
-<th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>==</code></td>
-<td>Checks if two values are equal.</td>
-<td><code>5 == 5</code></td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>!=</code></td>
-<td>Checks if two values are not equal.</td>
-<td><code>5 != 2</code></td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>&gt;</code></td>
-<td>Checks if the first value is greater than the second.</td>
-<td><code>5 &gt; 2</code></td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>&lt;</code></td>
-<td>Checks if the first value is less than the second.</td>
-<td><code>2 &lt; 5</code></td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>&gt;=</code></td>
-<td>Checks if the first value is greater than or equal to the second.</td>
-<td><code>5 &gt;= 5</code></td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>&lt;=</code></td>
-<td>Checks if the first value is less than or equal to the second.</td>
-<td><code>2 &lt;= 5</code></td>
-<td><code>true</code></td>
-</tr>
-</tbody>
-</table>
+<h3 id="code-snippet">Code Snippet</h3>
+<pre><code class="language-glimmr">2 + 3
+512 % 2
+</code></pre>
 <h2 id="logical-operators">Logical Operators</h2>
 <table>
 <thead>
 <tr>
 <th>Operator</th>
 <th>Description</th>
-<th>Example</th>
-<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>&amp;&amp;</code></td>
-<td>Returns true if both conditions are true.</td>
-<td><code>true &amp;&amp; true</code></td>
-<td><code>true</code></td>
+<td><code>==</code></td>
+<td>Checks if two values are equal.</td>
 </tr>
 <tr>
-<td><code>!</code></td>
-<td>Negates a boolean value.</td>
-<td><code>!true</code></td>
-<td><code>false</code></td>
+<td><code>!=</code></td>
+<td>Checks if two values are not equal.</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Checks if the first value is greater than the second.</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Checks if the first value is less than the second.</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Checks if the first value is greater than or equal to the second.</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Checks if the first value is less than or equal to the second.</td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>Checks if both operands are equal to true</td>
+</tr>
+<tr>
+<td><code>││</code></td>
+<td>Checks if one of the operands is equals to true</td>
 </tr>
 </tbody>
 </table>
+<h3 id="code-snippet_1">Code Snippet</h3>
+<pre><code class="language-glimmr">5 * 2 &gt; 10
+10 == 5 * 2
+</code></pre>
+<h2 id="unary-operators">Unary Operators</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>!</code></td>
+<td>Negates a boolean value.</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>Inverts all bits.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="code-snippet_2">Code Snippet</h3>
+<pre><code class="language-glimmr">!false
+</code></pre>
 <h2 id="bitwise-operators">Bitwise Operators</h2>
 <table>
 <thead>
 <tr>
 <th>Operator</th>
 <th>Description</th>
-<th>Example</th>
-<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>&amp;</code></td>
 <td>Performs bitwise AND operation.</td>
-<td><code>5 &amp; 3</code></td>
-<td><code>1</code></td>
 </tr>
 <tr>
 <td><code>^</code></td>
 <td>Performs bitwise XOR operation.</td>
-<td><code>5 ^ 3</code></td>
-<td><code>6</code></td>
-</tr>
-<tr>
-<td><code>~</code></td>
-<td>Inverts all bits.</td>
-<td><code>~5</code></td>
-<td><code>-6</code></td>
 </tr>
 <tr>
 <td><code>&gt;&gt;</code></td>
 <td>Performs a bitwise right shift.</td>
-<td><code>8 &gt;&gt; 2</code></td>
-<td><code>2</code></td>
 </tr>
 <tr>
 <td><code>&lt;&lt;</code></td>
 <td>Performs a bitwise left shift.</td>
-<td><code>2 &lt;&lt; 3</code></td>
-<td><code>16</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="code-snippet_3">Code Snippet</h3>
+<pre><code class="language-glimmr">1 &lt;&lt; 4
+1 &gt;&gt; ~2
+</code></pre>
 <h2 id="string-operators">String Operators</h2>
 <table>
 <thead>
 <tr>
 <th>Operator</th>
 <th>Description</th>
-<th>Example</th>
-<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>+</code></td>
-<td>Combines two strings into one.</td>
-<td><code>"Hello" + "World"</code></td>
-<td><code>"HelloWorld"</code></td>
-</tr>
-<tr>
-<td><code>==</code></td>
-<td>Checks if two strings are identical.</td>
-<td><code>"Hello" == "Hello"</code></td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>!=</code></td>
-<td>Checks if two strings are different.</td>
-<td><code>"Hello" != "World"</code></td>
-<td><code>true</code></td>
-</tr>
-<tr>
 <td><code>++</code></td>
 <td>Concatenates two strings.</td>
-<td><code>"Good" ++ "Bye"</code></td>
-<td><code>"GoodBye"</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="code-snippet_4">Code Snippet</h3>
+<pre><code class="language-glimmr">&quot;Good&quot; ++ &quot;Bye&quot;
+</code></pre>
 <h2 id="pipe-operator">Pipe Operator</h2>
 <table>
 <thead>
 <tr>
 <th><strong>Operator</strong></th>
 <th><strong>Description</strong></th>
-<th><strong>Example</strong></th>
-<th><strong>Result</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>\|&gt;</code></td>
+<td><code>│&gt;</code></td>
 <td>Passes the result of one expression as input to another.</td>
-<td><code>"Hello" \|&gt; "${'World'}"</code></td>
-<td><code>"HelloWorld"</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="code-snippet_5">Code Snippet</h3>
+<pre><code>&quot;Hello &quot;
+|&gt; toUpperCase()
+|&gt; concat(&quot;World&quot;)
+</code></pre>
+<p><strong>IMPORTANT:</strong> <em>Function calls are discussed in depth, in the functions section of this document.</em> </p>
 <h2 id="dot-operator">Dot Operator</h2>
 <table>
 <thead>
 <tr>
 <th>Operator</th>
 <th>Description</th>
-<th>Example</th>
-<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>.</code></td>
 <td>Accesses a property or method of an object.</td>
-<td><code>object.property</code></td>
-<td>Value of <code>property</code></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<h3 id="code-snippet_6">Code Snippet</h3>
+<pre><code class="language-glimmr">foo.bar
+player.pos.x
+</code></pre>
+<h2 id="whats-next">What's next?</h2></div>
                 </div>
         </div>
 
