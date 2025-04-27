@@ -44,6 +44,24 @@ Boolean values are used for logical operations:
 - `true`
 - `false`
 
+## Tuple Literals
+A tuple literal is represented by a sequence of values enclosed in parentheses `()`, with each value separated by a comma `,`. 
+
+```glimmr
+(1, 2, 3)
+("Hello", 1, "World")
+```
+
+Tuples are useful for grouping multiple values together, and can be used in a variety of contexts, such as function return values or data structures.
+
+## List Literal 
+List literals allow us to store multiple values of the same type in an ordered single data structure. A list literal is represented by a sequence of values enclosed in square brackets `[]`, with each value separated by a comma `,`.
+
+```glimmr
+[1, 2, 3]
+["apple", "banana", "orange"]
+```
+
 ## Unit Literal
 
 The Unit type represents an empty value:

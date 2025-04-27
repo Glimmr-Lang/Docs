@@ -1,4 +1,5 @@
-​Operators
+
+# Operators
 
 Operators are special symbols used in expressions to perform operations on values. This section covers the various operators available in Glimmr, along with examples and descriptions.
 ## Arithmetic Operators
