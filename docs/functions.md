@@ -34,5 +34,27 @@ add(add(inc(1), 1), 3)
 concat(concat(hello(), space()), world())
 ```
 
+
+## Annotated Functions
+
+#### External Functions
+
+External functions are functions that reference code that was written in JavaScript. Bodies of external functions are not parsed so they may contain raw java script code but compiler is strict when it comes to the argument types and the return type. You are required to specify them as they cannot be inferred. The body of an external function is terminated by a `;`.  E.g:
+
+```glimmr
+#[extern]
+fn console_log (a: a) : Unit = 
+	consoloe.log(a); //; terminates the function
+```
+
+#### Exported Functions
+
+Exported functions are glimmr functions that are made public and callable from javascript code once compiled. These functions are normal glimmr functions. 
+
+```glimmr
+#[export]
+fn hello a = "Hello " ++ a
+```
+
 ## What's next?
 
