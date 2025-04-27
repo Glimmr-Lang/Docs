@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Installation - Glimmr</title>
+        <title>Type Inference - Glimmr</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
@@ -53,8 +53,8 @@
             
             
             
-                <li class="active">
-                    <a href="./">Installation</a>
+                <li >
+                    <a href="../install/">Installation</a>
                 </li>
             
             
@@ -83,8 +83,8 @@
             
             
             
-                <li >
-                    <a href="../inference/">Type Inference</a>
+                <li class="active">
+                    <a href="./">Type Inference</a>
                 </li>
             
             
@@ -99,12 +99,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="next" href="..">
+                        <a rel="next" href="../types/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../firstprogram/">
+                        <a rel="prev" href="../functions/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -120,13 +120,9 @@
     <ul class="nav bs-sidenav">
       
     
-        <li class="main active"><a href="#get-glimmr">Get Glimmr</a></li>
+        <li class="main active"><a href="#type-inference">Type Inference</a></li>
         
-            <li><a href="#pre-built-binaries">Pre-built Binaries</a></li>
-        
-            <li><a href="#build-from-source">Build from source</a></li>
-        
-            <li><a href="#install">Install</a></li>
+            <li><a href="#type-system">Type System</a></li>
         
             <li><a href="#whats-next">What's next?</a></li>
         
@@ -136,33 +132,32 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="get-glimmr">Get Glimmr</h1>
-<h2 id="pre-built-binaries">Pre-built Binaries</h2>
+<h1 id="type-inference">Type Inference</h1>
 <blockquote>
-<p>Glimmr is currently only available through source, pre-built binaries are not available, so in order to try out glimmr you will have to build it yourself. Luckily the build process is very simple. Follow the build steps below.</p>
+<p>Type inference is the process of automatically determining the data types of variables in a programming language. It allows developers to write code without explicitly specifying the type of every variable, making the code more concise and easier to maintain. The compiler  then infers the types based on the assigned values, expressions, and usage of the variables. </p>
 </blockquote>
-<h2 id="build-from-source">Build from source</h2>
-<blockquote>
-<p>To compile the glimmr compiler you have to first get the source code.</p>
-</blockquote>
-<pre><code class="language-sh">$ git clone https://github.com/Glimmr-Lang/Glimmr
+<p>Glimmr supports type inference. So when calling a function or assigning a value to a variable, you don't need to specify the type explicitly. The Glimmr compiler analyzes the assigned values, expressions, and usage of the variables to automatically infer their types, allowing you to write more concise and expressive code.</p>
+<h2 id="type-system">Type System</h2>
+<p>Glimmr uses a somewhat good implementation of the Hindley-Milner type system, a well-established and widely used type inference algorithm. This type system is capable of inferring types for a wide range of programming constructs, including function calls, variable assignments, and complex expressions. The Hindley-Milner algorithm is known for its ability to infer types accurately and efficiently, making it a popular choice for functional and statically-typed programming languages. </p>
+<p>Lets look at some example expressions:</p>
+<pre><code class="language-glimmr">20 * 2
 </code></pre>
-<p>Then run the following commands:</p>
-<pre><code class="language-sh">$ cd Glimmr
-$ mvn package
+<p>The above expression will have the result of type <code>Number</code>. Why? 
+Because:
+- <code>20</code> and <code>2</code> are both numbers
+- <code>*</code> is an operator that returns <code>Number</code> and takes two <code>Number</code> expressions.</p>
+<pre><code class="language-glimmr">(a / 2) * c 
 </code></pre>
-<p>The glimr compiler should then be compiled and packaged into a <code>.jar</code> file that is ready to use. There is a very useful shell script on the root of the directory, named <code>glmr</code>, this script is the entry point of the compiler. An install script will be included in future releases.</p>
-<h2 id="install">Install</h2>
-<p>You can copy the glimmr folder to any place on your computer and make sure to add it to the path so that the glimmr compiler can be invoked from any working directory in the terminal. If everything went well try running the following command on your terminal. </p>
-<pre><code class="language-sh">$ glmr --h
-</code></pre>
-<p>If glimmr is installed properly you should see a wall of text scroll up, quickly followed by a word art created in ASCII. If not try following the build steps one more time. </p>
-<p>You can also test the installation by running the following command</p>
-<pre><code class="language-glmr">$ glmr --version
-</code></pre>
-<p><strong>IMPORTANT</strong> : Please note that glimmr is still a work in progress, so bugs and unfinished features are expected. If you would like to contribute to glimmr submit a pull request on <a href="https://github.com/Glimmr-Lang">github</a>. Thank you</p>
-<h2 id="whats-next">What's next?</h2>
-<p>Now that your are ready to start your glimmr journey let me not hold you back. Its coding time!</p></div>
+<p>The above expression will have the result of type <code>Number</code>. Why? </p>
+<p>Because:</p>
+<ul>
+<li><code>a</code> is inferred to be a <code>Number</code> because it's being divided by <code>2</code>, which is a <code>Number</code>, and the <code>/</code> operator returns a <code>Number</code>.</li>
+<li>The result of <code>(a / 2)</code> is a <code>Number</code> because <code>/</code> returns a <code>Number</code>.</li>
+<li><code>c</code> is inferred to be a <code>Number</code> because it's being multiplied by the result of <code>(a /2)</code>, which is a <code>Number</code>, and the <code>*</code> operator requires two <code>Number</code> expressions. </li>
+<li>Therefore, the result of the entire expression <code>(a /2) * c</code> is also a <code>Number</code>, as the <code>*</code> operator returns a <code>Number</code> given two <code>Number</code> operands.</li>
+</ul>
+<p>Glimmr can infer any expression, including <code>String</code> , <code>List</code> and <code>Tuple</code> types.</p>
+<h2 id="whats-next">What's next?</h2></div>
                 </div>
         </div>
 

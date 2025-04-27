@@ -82,6 +82,18 @@
                 </li>
             
             
+            
+                <li >
+                    <a href="../inference/">Type Inference</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../functions/">Functions</a>
+                </li>
+            
+            
             </ul>
 
             <!-- Search, Navigation and Repo links -->
@@ -91,8 +103,8 @@
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../inference/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -148,13 +160,13 @@
 </blockquote>
 <pre><code class="language-glimmr">Boolean
 </code></pre>
-<h4 id="tuple-type">Tuple Type</h4>
+<h4 id="type-variable">Type Variable</h4>
 <blockquote>
-<blockquote>
-<p>A <strong>tuple</strong> is a finite sequence of objects that may optionally be of the same type which are called the <em>elements</em>.</p>
+<p>A type variable is a symbolic name given to a type that is not yet known. In the context of glimmr's static typing system, type variables are used to represent types that will be determined at compile time. They are often used in type inference, where the type system can automatically deduce the types of variables without explicit type annotations. </p>
 </blockquote>
-</blockquote>
-<pre><code class="language-glimmr">(Number, String, Boolean)
+<pre><code class="language-glimmr">a
+b
+foo
 </code></pre>
 <h4 id="unit-type">Unit Type</h4>
 <blockquote>
@@ -163,6 +175,13 @@
 <pre><code class="language-glimmr">Unit
 </code></pre>
 <h3 id="composite-types">Composite Types</h3>
+<h4 id="list-type">List Type</h4>
+<blockquote>
+<p>The list type represents a collection of values that can be of any type, including scalar types and other composite types. This allows for flexibility in data representation and manipulation. </p>
+</blockquote>
+<pre><code class="language-glimmr">[Number]
+[String]
+</code></pre>
 <h4 id="sum-types">Sum Types</h4>
 <blockquote>
 <p>"In computer programming especially functional programming and type theory, an <strong>algebraic data type*(</strong>ADT**) is a kind of composite data type, i.e., a data type formed by combining other types." - wikipedia.</p>
@@ -176,6 +195,13 @@ None
 // VS
 Some a b
 </code></pre>
+<h4 id="tuple-type">Tuple Type</h4>
+<blockquote>
+<p>The tuple type allows us to to represent data finite sequences of objects that may optionally be of the same type. </p>
+</blockquote>
+<pre><code class="language-glimmr">(String, Number, String)
+(Some String, Some a, Number)
+</code></pre>
 <h4 id="object-type">Object Type</h4>
 <blockquote>
 <p>The object type in glimmr is a composite data type that allows for the representation of complex data structures. It is a collection of key-value pairs, where each key is an identifier and each value can be any type, including other objects. This allows for flexible and dynamic data modeling.</p>
@@ -186,7 +212,15 @@ Some a b
   isAdmin: Boolean
 }
 </code></pre>
-<h3 id="type-aliases">Type Aliases</h3>
+<h4 id="union-type">Union Type</h4>
+<blockquote>
+<p>Union type is a type that can hold a value of any of its member types. It is a way to combine multiple types into a single type, allowing a value to be one of several types. In glimmr, union types are useful when a value can have multiple possible types, such as when working with data from an external source that may have varying types.</p>
+</blockquote>
+<pre><code class="language-glimmr">String | Number
+Some a | None
+</code></pre>
+<p>Note that union types can also be used with more than two types.</p>
+<h4 id="type-alias">Type Alias</h4>
 <blockquote>
 <p>Type aliases allow us to name complex types and reuse them throughout our codebase. This can improve code readability and maintainability by giving meaningful names to complex type definitions. In glimmr, type aliases are defined using the <code>type</code> keyword followed by the type name and the type definition.</p>
 </blockquote>
