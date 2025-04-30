@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Literals - Glimmr</title>
+    <title>expressions - Glimmr</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Literals";
-        var mkdocs_page_input_path = "literals.md";
+        var mkdocs_page_name = "expressions";
+        var mkdocs_page_input_path = "expressions.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -56,32 +56,28 @@
                 <li class="toctree-l1"><a class="reference internal" href="../operators/">operators</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Literals</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#number-literals">Number Literals</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#string-literals">String Literals</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#boolean-literals">Boolean Literals</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unit-literal">Unit Literal</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#comments">Comments</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#single-line-comments">Single line comments</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#multi-line-comments">Multi-line comments</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#whats-next">What's next?</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../literals/">Literals</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../expressions/">expressions</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">expressions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples-of-expressions">Examples of Expressions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arithmetic-expressions">Arithmetic expressions:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#string-expressions">String expressions:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comparison-expressions">Comparison expressions:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logical-expressions">Logical expressions:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assignment-expressions">Assignment expressions:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#let-declarations">Let Declarations</a>
+    </li>
+    </ul>
                 </li>
               </ul>
       </div>
@@ -98,7 +94,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Literals</li>
+      <li class="breadcrumb-item active">expressions</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -107,60 +103,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="literals">Literals</h1>
-<p>literals are values that are directly inserted into the code, such as numbers, strings, etc. They are exact values that are not variables and do not change during the execution of the program.</p>
-<h2 id="number-literals">Number Literals</h2>
-<p>Numbers can be expressed in various formats:</p>
-<pre><code class="language-glimmr">20
-10_000_000
-50
-</code></pre>
-<p>Glimmr also supports decimal numeric literals. Similar to <code>Integer</code> number literals , decimal literals can also be separated by <code>_</code>.</p>
-<pre><code class="language-glimmr">20.5
-30.5
-</code></pre>
-<h2 id="string-literals">String Literals</h2>
-<p>Strings allow embedding text and expressions:</p>
+                <h1 id="expressions">Expressions</h1>
+<p>An expression is a combination of literals, operators, and variables that evaluates to a value. Expressions are used to perform calculations, comparisons, and assignments in a program.</p>
+<h2 id="examples-of-expressions">Examples of Expressions</h2>
+<p>From <code>literals</code>, we know that literals are values that are written exactly as they are meant to be interpreted. Here are some examples of expressions that use literals:</p>
+<h2 id="arithmetic-expressions">Arithmetic expressions:</h2>
 <ul>
-<li><strong>Basic String:</strong> </li>
+<li><code>2 + 3</code> evaluates to 5</li>
+<li><code>5 - 2</code> evaluates to 3</li>
+<li><code>4 * 5</code> evaluates to 20</li>
 </ul>
-<pre><code class="language-glimmr">&quot;Alice&quot;
-&quot;Hello, I'm  a basic string&quot;
+<h2 id="string-expressions">String expressions:</h2>
+<pre><code>+ "hello" + " world" evaluates to "hello world"
 </code></pre>
-<p>Glimmr also supports <strong>Interpolated Strings</strong>, which can embed expressions. An interpolated string is denoted by a dollar sign ($). The expressions are enclosed in curly braces {} and can be used to embed dynamic values into the string.</p>
-<pre><code class="language-glimmr">&quot;${5} * 2 = ${5 * 2}&quot;
-&quot;Hello ${'World'}&quot;
-</code></pre>
-<h2 id="boolean-literals">Boolean Literals</h2>
-<p>Boolean values are used for logical operations:</p>
+<p>From <code>operators</code>, we know that operators are symbols used to perform operations on values. Here are some examples of expressions that use operators:</p>
+<h2 id="comparison-expressions">Comparison expressions:</h2>
 <ul>
-<li><code>true</code></li>
-<li><code>false</code></li>
+<li><code>5 &gt; 3</code>  evaluates to true</li>
+<li><code>2 == 3</code>  evaluates to false</li>
+<li><code>"hello" != "goodbye"</code>  evaluates to true</li>
 </ul>
-<h2 id="unit-literal">Unit Literal</h2>
-<p>The Unit type represents an empty value:</p>
+<h2 id="logical-expressions">Logical expressions:</h2>
 <ul>
-<li><code>()</code></li>
+<li><code>true &amp;&amp; false</code>  evaluates to false</li>
+<li><code>true || false</code>  evaluates to true</li>
+<li><code>!true</code>  evaluates to false</li>
 </ul>
-<h2 id="comments">Comments</h2>
-<p>Comments are useful for documenting code and providing context to developers. This language supports the following types of comments:</p>
-<h4 id="single-line-comments">Single line comments</h4>
-<pre><code class="language-glimmr">// Yow, I'm a comment
+<h2 id="assignment-expressions">Assignment expressions:</h2>
+<ul>
+<li><code>let  x = 5</code> assigns the value 5 to the variable x</li>
+<li><code>let x += 2</code> increments the value of x by 2</li>
+</ul>
+<h2 id="let-declarations">Let Declarations</h2>
+<p>Let declarations are used to declare and initialize variables. Here are some examples:</p>
+<ul>
+<li><code>let x = 5;</code>  declares a variable x and initializes it with the value 5</li>
+<li><code>let name = "John";</code>  declares a variable name and initializes it with the string "John"</li>
+<li><code>let isAdmin = true;</code>  declares a variable isAdmin and initializes it with the boolean value true</li>
+</ul>
+<p>From <code>firstprogram</code>,  we can see an example of a simple program that uses expressions 
+and let declaration to calculate the area of a rectangle.</p>
+<pre><code>// calculate the area of a rectangle
+let width = 5;
+let height = 3;
+let area = width * height;
 </code></pre>
-<h4 id="multi-line-comments">Multi-line comments</h4>
-<pre><code class="language-glimmr">/* 
- * Glimmr supports multi-line comments :)
- */
-</code></pre>
-<p>Comments are ignored by the compiler/interpreter and do not affect the execution of the code.</p>
-<h2 id="whats-next">What's next?</h2>
-<p>Now that we've explored the basics of literals in Glimmr, we can move on to more exciting topics. In the next section, we'll delve into Glimmr data types. We'll discover how Glimmr's type system works static typing can help us avoid writing error prone programs. </p>
+<p>In this example, the expression <code>width * height</code> evaluates to the product of the values of <code>width</code> and <code>height</code>, which is then assigned to the variable <code>area</code>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../operators/" class="btn btn-neutral float-left" title="operators"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../expressions/" class="btn btn-neutral float-right" title="expressions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../literals/" class="btn btn-neutral float-left" title="Literals"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -183,10 +176,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../operators/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../literals/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../expressions/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
