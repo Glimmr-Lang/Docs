@@ -13,3 +13,12 @@
 .warning {
 	
 }
+
+
+th {
+  padding-right: 1rem;
+}
+
+td {
+  padding-left: 1rem;
+}

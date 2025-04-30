@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Installation - Glimmr</title>
+        <title>Expressions - Glimmr</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
@@ -53,8 +53,8 @@
             
             
             
-                <li class="active">
-                    <a href="./">Installation</a>
+                <li >
+                    <a href="../install/">Installation</a>
                 </li>
             
             
@@ -104,16 +104,6 @@
 
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
-                    <li >
-                        <a rel="next" href="..">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../firstprogram/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
                 
             </ul>
         </div>
@@ -126,15 +116,21 @@
     <ul class="nav bs-sidenav">
       
     
-        <li class="main active"><a href="#get-glimmr">Get Glimmr</a></li>
+        <li class="main active"><a href="#expressions">Expressions</a></li>
         
-            <li><a href="#pre-built-binaries">Pre-built Binaries</a></li>
+            <li><a href="#examples-of-expressions">Examples of Expressions</a></li>
         
-            <li><a href="#build-from-source">Build from source</a></li>
+            <li><a href="#arithmetic-expressions">Arithmetic expressions:</a></li>
         
-            <li><a href="#install">Install</a></li>
+            <li><a href="#string-expressions">String expressions:</a></li>
         
-            <li><a href="#whats-next">What's next?</a></li>
+            <li><a href="#comparison-expressions">Comparison expressions:</a></li>
+        
+            <li><a href="#logical-expressions">Logical expressions:</a></li>
+        
+            <li><a href="#assignment-expressions">Assignment expressions:</a></li>
+        
+            <li><a href="#let-declarations">Let Declarations</a></li>
         
     
     
@@ -142,33 +138,85 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="get-glimmr">Get Glimmr</h1>
-<h2 id="pre-built-binaries">Pre-built Binaries</h2>
-<blockquote>
-<p>Glimmr is currently only available through source, pre-built binaries are not available, so in order to try out glimmr you will have to build it yourself. Luckily the build process is very simple. Follow the build steps below.</p>
-</blockquote>
-<h2 id="build-from-source">Build from source</h2>
-<blockquote>
-<p>To compile the glimmr compiler you have to first get the source code.</p>
-</blockquote>
-<pre><code class="language-sh">$ git clone https://github.com/Glimmr-Lang/Glimmr
+<h1 id="expressions">Expressions</h1>
+<p>An expression is a combination of literals, operators, and variables that evaluates to a value. Expressions are used to perform calculations, comparisons, and assignments in a program.</p>
+<h2 id="examples-of-expressions">Examples of Expressions</h2>
+<p>From <code>literals</code>, we know that literals are values that are written exactly as they are meant to be interpreted. Here are some examples of expressions that use literals:</p>
+<h2 id="arithmetic-expressions">Arithmetic expressions:</h2>
+<ul>
+<li>
+<p><code>2 + 3</code> evaluates to 5</p>
+</li>
+<li>
+<p><code>5 - 2</code> evaluates to 3</p>
+</li>
+<li>
+<p><code>4 * 5</code> evaluates to 20</p>
+</li>
+</ul>
+<h2 id="string-expressions">String expressions:</h2>
+<ul>
+<li><code>"hello" + " world"</code> evaluates to "hello world"</li>
+</ul>
+<p>From <code>operators</code>, we know that operators are symbols used to perform operations on values. Here are some examples of expressions that use operators:</p>
+<h2 id="comparison-expressions">Comparison expressions:</h2>
+<ul>
+<li>
+<p><code>5 &gt; 3</code>  evaluates to true</p>
+</li>
+<li>
+<p><code>2 == 3</code>  evaluates to false</p>
+</li>
+<li>
+<p><code>"hello" != "goodbye"</code>  evaluates to true</p>
+</li>
+</ul>
+<h2 id="logical-expressions">Logical expressions:</h2>
+<ul>
+<li>
+<p><code>true &amp;&amp; false</code>  evaluates to false</p>
+</li>
+<li>
+<p><code>true || false</code>  evaluates to true</p>
+</li>
+<li>
+<p><code>!true</code>  evaluates to false</p>
+</li>
+</ul>
+<h2 id="assignment-expressions">Assignment expressions:</h2>
+<ul>
+<li>
+<p><code>let  x = 5</code> assigns the value 5 to the variable x</p>
+</li>
+<li>
+<p><code>let x += 2</code> increments the value of x by 2</p>
+</li>
+</ul>
+<h2 id="let-declarations">Let Declarations</h2>
+<p>Let declarations are used to declare and initialize variables. Here are some examples:</p>
+<ul>
+<li>
+<p><code>let x = 5;</code>  declares a variable x and initializes it with the value 5</p>
+</li>
+<li>
+<p><code>let name = "John";</code>  declares a variable name and initializes it with the string "John"</p>
+</li>
+<li>
+<p><code>let isAdmin = true;</code>  declares a variable isAdmin and initializes it with the boolean value true</p>
+</li>
+</ul>
+<p>From <code>firstprogram</code>,  we can see an example of a simple program that uses expressions</p>
+<p>and let declaration to calculate the area of a rectangle.</p>
+<pre><code>// calculate the area of a rectangle
+
+let width = 5;
+
+let height = 3;
+
+let area = width * height;
+
 </code></pre>
-<p>Then run the following commands:</p>
-<pre><code class="language-sh">$ cd Glimmr
-$ mvn package
-</code></pre>
-<p>The glimr compiler should then be compiled and packaged into a <code>.jar</code> file that is ready to use. There is a very useful shell script on the root of the directory, named <code>glmr</code>, this script is the entry point of the compiler. An install script will be included in future releases.</p>
-<h2 id="install">Install</h2>
-<p>You can copy the glimmr folder to any place on your computer and make sure to add it to the path so that the glimmr compiler can be invoked from any working directory in the terminal. If everything went well try running the following command on your terminal. </p>
-<pre><code class="language-sh">$ glmr --h
-</code></pre>
-<p>If glimmr is installed properly you should see a wall of text scroll up, quickly followed by a word art created in ASCII. If not try following the build steps one more time. </p>
-<p>You can also test the installation by running the following command</p>
-<pre><code class="language-glmr">$ glmr --version
-</code></pre>
-<p><strong>IMPORTANT</strong> : Please note that glimmr is still a work in progress, so bugs and unfinished features are expected. If you would like to contribute to glimmr submit a pull request on <a href="https://github.com/Glimmr-Lang">github</a>. Thank you</p>
-<h2 id="whats-next">What's next?</h2>
-<p>Now that your are ready to start your glimmr journey let me not hold you back. Its coding time!</p></div>
+<p>In this example, the expression <code>width * height</code> evaluates to the product of the values of <code>width</code> and <code>height</code>, which is then assigned to the variable <code>area</code>.</p></div>
                 </div>
         </div>
 
